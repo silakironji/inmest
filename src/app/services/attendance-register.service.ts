@@ -180,6 +180,36 @@ private attendanceDB = [
     week24_status: "present",
     
   }
+
+  {
+    id: 6,
+    employeeName: "Ushahemba Shir",
+    week1_status: "absent",
+    week2_status: "present",
+    week3_status: "present",
+    week4_status: "present",
+    week5_status: "present",
+    week6_status: "present",
+    week7_status: "absent",
+    week8_status: "absent",
+    week9_status: "present",
+    week10_status: "present",
+    week11_status: "present",
+    week12_status: "present",
+    week13_status: "absent",
+    week14_status: "absent",
+    week15_status: "absent",
+    week16_status: "present",
+    week17_status: "present",
+    week18_status: "present",
+    week19_status: "present",
+    week20_status: "present",
+    week21_status: "absent",
+    week22_status: "absent",
+    week23_status: "present",
+    week24_status: "present",
+    
+  }
 ];
   constructor() { }
 
