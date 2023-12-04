@@ -60,6 +60,7 @@ body {
 .goo-wrapper {
     display: flex;
     flex-direction: row;
+    
 }
 .goo-wrapper .side-nav {
     width: 250px;
@@ -79,6 +80,17 @@ body {
      margin-bottom: 5px;
 
 }
+.wrapper {
+    display: flex;  // Use flex display to create a flex container
+  }
+  
+
+  
+  .main-content-wrapper {
+    /* Your existing styles for the main content */
+    flex: 1;  // This allows the main content to take up the remaining space
+  }
+  
 .goo-wrapper .side-nav .menu a:hover {
     background-color: #00C8C8;
     color: #fff;
@@ -241,3 +253,5 @@ li a:hover {
     color:azure;
     font-family: 'Roboto', Verdana, sans-serif;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

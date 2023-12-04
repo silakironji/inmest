@@ -11,12 +11,11 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class UserDetailComponent implements OnInit {
   userId = '';
-  constructor(private route: ActivatedRoute){}
-  ngOnInit(): void {
-    this.route.queryParams.subscribe(param => {
-      console.log(param, 'query param');
-      this.userId = param["id"];
-    });
-  }
-
+    constructor(private route:ActivatedRoute){}
+    ngOnInit():void{
+      this.route.queryParams.subscribe(param =>{
+        console.log(param, 'query param');
+        this.userId = param["id"];
+      })
+    }
 }
