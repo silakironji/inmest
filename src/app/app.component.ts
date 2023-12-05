@@ -1,40 +1,76 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChange,
+  SimpleChanges,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { SideNavComponent } from './app-core/common/side-nav/side-nav.component';
+import { TopNavComponent } from "./app-core/common/top-nav/top-nav.component";
+
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule, LoginComponent, SideNavComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        FormsModule,
+        LoginComponent,
+        SideNavComponent,
+        TopNavComponent,
+    ]
 })
-export class AppComponent implements OnChanges, OnInit  {
-
+export class AppComponent implements OnChanges, OnInit {
   title = 'inmest-web';
-  name = "Lucky";
-  profile = {
-    id: 1,
-    first_name: "Lucky",
-    last_name: "Dogbey"
-  }
-  genesis = "hello";
+  @Input() name = 'Folasade';
+  profiles = [
+    {
+      id: 1,
+      first_name: 'Lucky',
+      last_name: 'Dogbey',
+    },
 
-  ngOnInit(): void {
-    console.log('On Init');
-  }
+    {
+      id: 2,
+      first_name: 'Oyin',
+      last_name: 'Lade',
+    },
+
+    {
+      id: 3,
+      first_name: 'Obehi',
+      last_name: 'Ataga',
+    },
+
+    {
+      id: 4,
+      first_name: 'Precious',
+      last_name: 'Deyemi',
+    },
+  ];
+
   constructor() {
-    console.log("constructor");
+    console.log('constructor');
   }
+
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes, 'changes');
-    for(const inputChange in changes) {
-      console.log(changes[inputChange].firstChange, inputChange);
+    console.log(SimpleChange);
+
+    for (const inputChanges in changes) {
+      console.log(changes[inputChanges].currentValue, inputChanges);
     }
   }
 
-  
+  ngOnInit(): void {
+    console.log('on Init');
+  }
 }

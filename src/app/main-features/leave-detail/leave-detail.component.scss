@@ -1,0 +1,75 @@
+// The Leave details css
+.details-container {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #f9f4f4;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+
+    flex-direction: column;
+  }
+  
+  .details-section {
+    padding-top: 10px;
+    margin-top: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+  }
+  
+  .details-content {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    
+   
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #f9f4f4;
+    
+    
+  }
+  
+.return-button,
+.accept-button,
+.decline-button {
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+   
+}
+
+
+.return-button {
+  background-color: #21999D;
+  color: white;
+  border-radius: 15px; /* Adjust the border-radius for rounded corners */
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.accept-button {
+  background-color: #21999D; /* Green */
+  color: white;
+  border-radius: 15px; /* Adjust the border-radius for rounded corners */
+  display: flex;
+  margin-left: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.decline-button {
+  background-color: #D17285; /* Red */
+  color: white;
+  border-radius: 15px; /* Adjust the border-radius for rounded corners */
+  margin-right: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

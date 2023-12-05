@@ -1,0 +1,24 @@
+.analytics {
+    display: flex;
+}
+
+.card-body{
+    margin: 1rem;
+    border: 1px solid grey;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+i{
+    font-size:32px;
+    margin-right:20px;
+   
+}
+
+.card-number{
+    font-size: 36px;
+    font-weight:bold;
+}

@@ -1,24 +1,41 @@
-<table class="table">
-<thead>
-    <th>User ID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Cohort</th>
-    <th>Action</th>
-</thead>
-<tbody>
-    <tr>
-        <td>1</td>
-        <td>Fleur</td>
-        <td>Sessinou</td>
-        <td>fleur.sessinou#meltwater.org</td>
-        <td>2024</td>
+<div class="table-container">
+  <div class="table shadow table-sm">
+   <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Cohort</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{ user.id }}</th>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.cohort }}</td>
         <td>
-            <a class="btn btn-link" [routerLink]="['/user-detail']" [queryParams]="{id: 1}">
-                <i class="fa fa-eye"></i>
-            </a>
+          <button class=""
+            (click)="viewUser(user) "style="background-color: rgb(237, 99, 99); margin-left: 10px; border-radius: 10px;"
+            [routerLink]="['/user-detail']"
+            [queryParams]="{
+              id: user.id,
+              name: user.first_name,
+            }"
+          >
+            viewUser
+          </button>
+          <button (click)="deleteUser(user)" style="background-color: rgb(237, 99, 99); margin-left: 10px; border-radius: 10px;">Delete</button>
         </td>
-    </tr>
-</tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
